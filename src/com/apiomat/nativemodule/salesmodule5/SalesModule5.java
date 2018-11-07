@@ -35,20 +35,21 @@ package com.apiomat.nativemodule.salesmodule5;
  */
 @com.apiomat.nativemodule.Module( description="SalesModule5", 
          usedModules = {"Basics" }, securityPermissions = {} )
-@com.apiomat.nativemodule.NativeModuleConfig(
-		datatype = Type.LONG,
-		defaultValue = 100,
-		example = "100",
-		notifyAllNodes = true,
-		order = 1
-		)
+
 public class SalesModule5 implements com.apiomat.nativemodule.IModule
 {
     static com.apiomat.nativemodule.IApplicationConfigProxy APP_CONFIG_PROXY;
     static com.apiomat.nativemodule.IStaticMethods AOM;
     
+    @com.apiomat.nativemodule.NativeModuleConfig(
+    		datatype = Type.NUMber,
+    		defaultValue = 100,
+    		example = "100",
+    		notifyAllNodes = true,
+    		order = 1
+    		)
     
-    
+    public static String HOSTNAME = "SalesModule5_hostname";
     // Sample for a module configuration
     //
     // @com.apiomat.nativemodule.NativeModuleConfig(
