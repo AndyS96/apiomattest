@@ -40,6 +40,14 @@ public class SalesModule5 implements com.apiomat.nativemodule.IModule
     static com.apiomat.nativemodule.IApplicationConfigProxy APP_CONFIG_PROXY;
     static com.apiomat.nativemodule.IStaticMethods AOM;
     
+    
+    @com.apiomat.nativemodule.NativeModuleConfig(
+    		datatype = Type.LONG,
+    		defaultValue = 100,
+    		example = "100",
+    		notifyAllNodes = true,
+    		order = 1
+    		)
     // Sample for a module configuration
     //
     // @com.apiomat.nativemodule.NativeModuleConfig(
@@ -54,7 +62,8 @@ public class SalesModule5 implements com.apiomat.nativemodule.IModule
     //
     // Read @NativeModuleConfig values using the following code:
     // SalesModule5.APP_CONFIG_PROXY.getConfigValue( SalesModule5.HOSTNAME, appName, system );
-
+    
+    
     /**
      * This method gets called once in the cluster when the module is uploaded.
      */
